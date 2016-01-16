@@ -39,6 +39,9 @@ class ServerChecker {
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 6);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 12);
 
+		// Follow redirects
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 		curl_exec($ch);
