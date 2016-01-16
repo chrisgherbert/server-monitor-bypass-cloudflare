@@ -35,11 +35,11 @@ function check(){
 				$mailer->set_text($text);
 				$mailer->set_smtp_config($smtp_settings);
 
-				return $mailer->send();
+				echo $mailer->send();
 
 			}
 			else {
-				return "Looking good with all the servers";
+				echo "Looking good with {$server->host} ({$server_checker->get_response_code()}) \r\n";
 			}
 
 		}

@@ -17,8 +17,6 @@ class ServerChecker {
 
 		$response_code = $this->get_response_code();
 
-		var_dump($response_code);
-
 		return $this->is_response_code_valid($response_code);
 
 	}
