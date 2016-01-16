@@ -25,14 +25,14 @@ cp config.json.example config.json
 ```json
 {
 	"recipients": [
-		"email": "example@email.com",
-		"email": "example2@email.com",
+		"example@email.com",
+		"example2@email.com",
 	],
 	"smtp": {
 		"host": "smtp.example.com",
 		"username": "user",
 		"password": "password",
-		"send_email": "example@email.com"
+		"send_email": "example@email.com",
 		"auth": true,
 		"secure": "tls",
 		"port": 587
