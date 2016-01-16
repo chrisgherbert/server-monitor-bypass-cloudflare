@@ -13,6 +13,13 @@ First, install dependencies using:
 ```sh
 composer install
 ```
+After creating a configuration file (see below), just run:
+
+```sh
+php check.php
+```
+
+This probably only useful in a cron job that runs periodically.
 
 ### Configuration
 
