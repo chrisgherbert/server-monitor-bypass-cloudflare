@@ -24,10 +24,15 @@ function check(){
 
 			if (!$server_checker->check()){
 
+				$text = "Server IP: {$server->ip} \r\n";
+				$text .= "Server Host: {$server->host} \r\n";
+				$text .= "Response Code: {$server_checker->get_response_code()} ";
+				$text .= "({$server_checker->get_reponse_code_description($server_checker->get_response_code())})";
+
 				$mailer = new Emailer;
 				$mailer->set_email_addresses($recipients);
 				$mailer->set_subject("Uh oh! Server {$server->host} may be down.");
-				$mailer->set_text("Server IP: {$server->ip} \r\n Server Host: {$server->host} \r\n Response Code: {$server_checker->get_response_code()} ");
+				$mailer->set_text($text);
 				$mailer->set_smtp_config($smtp_settings);
 
 				return $mailer->send();
