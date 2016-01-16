@@ -6,6 +6,7 @@ class ServerChecker {
 
 	protected $host;
 	protected $ip;
+	protected $response_code;
 
 	public function __construct($host, $ip){
 		$this->host = $host;
@@ -22,11 +23,11 @@ class ServerChecker {
 
 	}
 
-	///////////////
-	// Protected //
-	///////////////
+	public function get_response_code(){
 
-	protected function get_response_code(){
+		if (isset($this->response_code)){
+			return $this->response_code;
+		}
 
 		// init
 		$ch = curl_init($this->ip);
@@ -44,10 +45,18 @@ class ServerChecker {
 		$info = curl_getinfo($ch);
 
 		if (isset($info['http_code'])){
-			return $info['http_code'];
+
+			$this->response_code = $info['http_code'];
+
+			return $this->response_code;
+
 		}
 
 	}
+
+	///////////////
+	// Protected //
+	///////////////
 
 	protected function is_response_code_valid($response_code){
 

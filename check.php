@@ -27,7 +27,7 @@ function check(){
 				$mailer = new Emailer;
 				$mailer->set_email_addresses($recipients);
 				$mailer->set_subject("Uh oh! Server {$server->host} may be down.");
-				$mailer->set_text("Invalid response code received from {$server->ip} using host {$server->host}. Better check it out ASAP.");
+				$mailer->set_text("Server IP: {$server->ip} \r\n Server Host: {$server->host} \r\n Response Code: {$server_checker->get_response_code()} ");
 				$mailer->set_smtp_config($smtp_settings);
 
 				return $mailer->send();
