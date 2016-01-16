@@ -1,0 +1,13 @@
+{
+    "name": "chrisgherbert/server-monitor-bypass-cloudflare",
+    "description": "Check status of server directly, using the IP address, to bypass Cloudflare",
+    "authors": [
+        {
+            "name": "Chris Herbert",
+            "email": "herbert@bermanco.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^5.2"
+    }
+}

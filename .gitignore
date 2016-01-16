@@ -1,0 +1,31 @@
+# OS Junk Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Other
+.codekit-config.json
+config.codekit
+.sass-cache/
+node_modules
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.log
+*.sql
+*.sqlite
+
+# Composer
+vendor/
+
+# Application-specific
+config.json
