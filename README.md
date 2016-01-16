@@ -1,6 +1,7 @@
-## Check response code of web server, using IP address
+## A very poor man's website status monitor
+#### Monitor and get email alerts using an IP address directly (to bypass Cloudflare)
 
-This check the response code of a website by using the IP address directly.  This is to bypass Cloudflare (or other similar services), which can continue to present a page even if the real webserver is down.
+This check the response code of a website by using the IP address directly.  This is to bypass Cloudflare (or other similar services), which can continue to service a seemingly working page even if the actual webserver is down.
 
 It's basically like putting the IP address and hostname directly in your hosts file.
 
