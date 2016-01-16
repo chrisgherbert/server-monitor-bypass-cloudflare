@@ -35,11 +35,13 @@ function check(){
 				$mailer->set_text($text);
 				$mailer->set_smtp_config($smtp_settings);
 
-				echo $mailer->send();
+				echo "Potential problem with {$server->host} (Response Code: {$server_checker->get_response_code()}). Sending email. \r\n";
+
+				echo '-- ' . $mailer->send() . "\r\n";
 
 			}
 			else {
-				echo "Looking good with {$server->host} ({$server_checker->get_response_code()}) \r\n";
+				echo "Looking good with {$server->host} (Response Code: {$server_checker->get_response_code()}) \r\n";
 			}
 
 		}
