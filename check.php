@@ -30,6 +30,8 @@ function check(){
 				$text .= "({$server_checker->get_reponse_code_description($server_checker->get_response_code())})";
 
 				$mailer = new Emailer;
+				$mailer->SMTPSecure = false;
+				$mailer->SMTPAutoTLS = false;
 				$mailer->set_email_addresses($recipients);
 				$mailer->set_subject("Uh oh! Server {$server->host} may be down.");
 				$mailer->set_text($text);
